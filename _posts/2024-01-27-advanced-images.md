@@ -11,6 +11,12 @@ images:
   slider: true
 ---
 
+<style>
+.img-fluid {
+  margin-top: -20px; /* Sesuaikan nilai ini sesuai kebutuhan Anda */
+}
+</style>
+
 This is an example post with advanced image components.
 
 ## Image Slider
@@ -27,7 +33,7 @@ This is a simple image slider. It uses the [Swiper](https://swiperjs.com/) libra
 
 ## Image Comparison Slider
 
-This is a simple image comparison slider. It uses the [img-comparison-slider](https://img-comparison-slider.sneas.io/) library. Check the [examples page](https://img-comparison-slider.sneas.io/examples.html) for more information of what you can achieve with it.
+This is a simple image comparison slider. It uses the [img-comparison-slider](https://img-comparison-slider.sneas.io/) library. Check the [examples page](https://img-comparison-slider.sneas.io/example[...]
 
 <img-comparison-slider>
   {% include figure.liquid path="assets/img/prof_pic.jpg" class="img-fluid rounded z-depth-1" slot="first" %}
