@@ -11,12 +11,6 @@ images:
   slider: true
 ---
 
-<style>
-.img-fluid {
-  margin-top: -20px; /* Sesuaikan nilai ini sesuai kebutuhan Anda */
-}
-</style>
-
 This is an example post with advanced image components.
 
 ## Image Slider
