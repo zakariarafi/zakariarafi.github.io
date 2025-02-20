@@ -27,8 +27,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I’m a third-year Undergraduate student at Brawijaya University. and part of System and AI Research Training Class taught by Professor Haryadi Gunawi from the University of Chicago and [Garuda Ace Community](https://sites.google.com/site/garudailmukomputer/about)
+I’m a third-year Undergraduate student at Brawijaya University. and part of System and AI Research Training Class taught by [Professor Haryadi Gunawi](http://people.cs.uchicago.edu/~haryadi/) from the University of Chicago and [Garuda Ace Community](https://sites.google.com/site/garudailmukomputer/about)
 
-My research interest is in the intersection of machine learning and systems. I am currently working on building efficient algorithmic trading to increase my family's income 
+My research interest is in the intersection of machine learning and systems. I am currently working on building efficient algorithmic trading while learning and working on Quantum Computer Architecture for ML Trading. 
 
 I commit 1 hour every week to provide guidance, suggestions, and/or mentorships for students from underrepresented groups or whoever is in need. Please [fill](https://forms.gle/SVXkp8QxZTtp4B9s8) in this form if you are interested. :sparkles: :smile:
