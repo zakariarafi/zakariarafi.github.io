@@ -439,8 +439,8 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+            },},{id: "news-i-commit-1-hour-every-week-to-provide-guidance-suggestions-and-or-mentorships-for-students-from-underrepresented-groups-or-whoever-is-in-need-please-fill-in-this-form-if-you-are-interested-sparkles-smile",
+          title: 'I commit 1 hour every week to provide guidance, suggestions, and/or mentorships for...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
