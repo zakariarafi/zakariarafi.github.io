@@ -7,9 +7,9 @@ subtitle: <a href='https://filkom.ub.ac.id/'>Filkom</a>. <a href='https://www.ub
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: true # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
   more_info: >
-    <p>📧: 🥇:github:</p>
+    <p>💻</p>
     <p>Medan, Indonesia 20222</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
