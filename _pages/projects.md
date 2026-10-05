@@ -1,65 +1,28 @@
 ---
 layout: page
-title: projects
+title: Research
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: The questions and ideas I’m currently exploring.
 nav: true
-nav_order: 3
-display_categories: [work, fun]
-horizontal: false
+nav_order: 1
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
-
-{% else %}
-
-<!-- Display projects without categories -->
-
-{% assign sorted_projects = site.projects | sort: "importance" %}
-
-  <!-- Generate cards for each project -->
-
-{% if page.horizontal %}
-
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
+<div class="research-grid">
+  <section class="research-card">
+    <p class="eyebrow">01 · Machine learning & systems</p>
+    <h2>Efficient learning systems</h2>
+    <p>My interests lie at the intersection of machine learning and systems, with a focus on making computation more efficient.</p>
+  </section>
+  <section class="research-card">
+    <p class="eyebrow">02 · Algorithmic trading</p>
+    <h2>From models to trading</h2>
+    <p>I’m working on efficient algorithmic trading and exploring how machine learning can support trading systems.</p>
+  </section>
+  <section class="research-card">
+    <p class="eyebrow">03 · Quantum computing</p>
+    <h2>Exploring new architectures</h2>
+    <p>I’m learning about quantum computer architecture and its relationship to machine learning for trading.</p>
+  </section>
 </div>
+
+Interested in exchanging ideas? [Send me an email](mailto:zakariarafifahmi@gmail.com).
