@@ -21,3 +21,5 @@ nav_order: 2
     <a class="text-link" href="https://github.com/zakariarafi/zakariarafi.github.io">View website source <span aria-hidden="true">↗</span></a>
   </section>
 </div>
+
+<section class="home-section" aria-labelledby="open-source-title">{% include open-source.liquid %}</section>

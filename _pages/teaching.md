@@ -8,6 +8,6 @@ nav: false
 
 <div class="learning-page">
   <p>I dedicate one hour each week to guidance and mentorship for students from underrepresented groups, or anyone who needs support. <a href="https://forms.gle/SVXkp8QxZTtp4B9s8">Request mentorship ↗</a></p>
-  <p>Explore sample video notes and recommended readings below. External articles are credited to their original author.</p>
+  <p>Explore sample video notes and recommended readings below. Articles and videos are clearly marked demos until the original content is ready.</p>
   {% include contents.liquid %}
 </div>

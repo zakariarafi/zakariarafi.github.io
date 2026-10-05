@@ -57,22 +57,41 @@
   {% endfor %}
 </div>
 <div class="reading-group" data-content-group>
-  <p class="eyebrow reading-label">Recommended reading · by Raihan Sultan</p>
+  <p class="eyebrow reading-label">Recommended reading · by Zakaria Rafi</p>
   <div class="reading-grid">
     {% for item in site.data.contents.readings %}
       <article class="content-card reading-card" data-content-format="teaching">
-        <a class="reading-cover" href="{{ item.url }}" tabindex="-1" aria-hidden="true"
-          ><img src="{{ item.image }}" alt="" loading="lazy" width="600" height="338"
-        ></a>
+        {% if item.url %}
+          <a class="reading-cover" href="{{ item.url }}" tabindex="-1" aria-hidden="true"
+            ><span class="reading-artwork artwork-{{ item.artwork }}">{{ item.tag }}</span></a
+          >
+        {% else %}
+          <button
+            class="reading-cover reading-demo"
+            type="button"
+            data-demo-title="{{ item.title | escape }}"
+            data-demo-platform="Reading"
+            aria-haspopup="dialog"
+            aria-label="Preview demo: {{ item.title | escape }}"
+          >
+            <span class="reading-artwork artwork-{{ item.artwork }}" aria-hidden="true">{{ item.tag }}</span>
+          </button>
+        {% endif %}
         <div class="reading-copy">
           <div class="card-meta">
-            <span>{{ item.tag }}</span><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %-d, %Y' }}</time>
+            <span>{{ item.tag }}</span>
+            {%- if item.demo -%}
+              <span class="demo-label">Demo · Coming soon</span>
+            {%- elsif item.date -%}
+              <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %-d, %Y' }}</time>
+            {%- endif %}
           </div>
           <h3>
-            <a href="{{ item.url }}">
-              {{- item.title }}
-              <span aria-hidden="true">↗</span></a
-            >
+            {% if item.url -%}
+              <a href="{{ item.url }}">{{ item.title }} ↗</a>
+            {%- else -%}
+              {{- item.title -}}
+            {%- endif %}
           </h3>
           <p>{{ item.description }}</p>
           <p class="reading-credit">{{ item.author }}</p>
@@ -85,6 +104,6 @@
   <button type="button" class="dialog-close" aria-label="Close preview">×</button>
   <p class="eyebrow" id="demo-platform"></p>
   <h2 id="demo-title"></h2>
-  <p id="demo-description">This is a sample content card. Zakaria’s video will appear here once the link is added.</p>
+  <p id="demo-description">This is a sample content card. Zakaria’s content will appear here once the link is added.</p>
   <button type="button" class="personal-button dialog-done">Got it</button>
 </dialog>
