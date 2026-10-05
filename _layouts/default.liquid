@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ site.lang }}">
+<html lang="{{ site.lang }}" data-theme="light">
   <!-- Head -->
   <head>
     {% if page.redirect %}
@@ -17,11 +17,12 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!-- Header -->
     {% include header.liquid %}
 
     <!-- Content -->
-    <div class="container mt-5" role="main">
+    <div class="container mt-5" role="main" id="main-content" tabindex="-1">
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == 'right' %}
           <div class="row">
@@ -52,5 +53,6 @@
 
     <!-- JavaScripts -->
     {% include scripts.liquid %}
+    <script defer src="{{ '/assets/js/personal.js' | relative_url | bust_file_cache }}"></script>
   </body>
 </html>

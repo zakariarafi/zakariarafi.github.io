@@ -1,0 +1,50 @@
+<div class="content-filters" role="group" aria-label="Filter content by format" hidden>
+  <button type="button" class="content-filter" data-filter="all" aria-pressed="true">All</button>
+  <button type="button" class="content-filter" data-filter="youtube" aria-pressed="false">YouTube</button>
+  <button type="button" class="content-filter" data-filter="tiktok" aria-pressed="false">TikTok</button>
+  <button type="button" class="content-filter" data-filter="reels" aria-pressed="false">Reels</button>
+  <button type="button" class="content-filter" data-filter="teaching" aria-pressed="false">Teaching</button>
+</div>
+<p class="sr-only" id="content-status" role="status" aria-live="polite"></p>
+<div class="video-grid" data-content-group>
+  {% for item in site.data.contents.videos %}
+    <article class="content-card video-card" data-content-format="{{ item.format }}">
+      {% if item.url %}
+        <a class="video-cover artwork-{{ item.artwork }}" href="{{ item.url | escape }}" aria-label="Watch {{ item.title | escape }} on {{ item.platform }}">
+      {% else %}
+        <button type="button" class="video-cover artwork-{{ item.artwork }}" data-demo-title="{{ item.title | escape }}" data-demo-platform="{{ item.platform | escape }}" aria-haspopup="dialog" aria-label="Preview demo: {{ item.title | escape }}">
+      {% endif %}
+        <span class="artwork-label" aria-hidden="true">{% case item.artwork %}{% when 'learning' %}Learn.<br>Understand.<br>Build.{% when 'minute' %}A small idea.<br>A new perspective.{% when 'systems' %}Think in<br>systems.{% endcase %}</span>
+        <span class="play-symbol" aria-hidden="true">▶</span>
+        <span class="video-duration">{{ item.duration }}</span>
+      {% if item.url %}</a>{% else %}</button>{% endif %}
+      <div class="card-meta"><span>{{ item.platform }}</span>{% if item.demo %}<span class="demo-label">Demo</span>{% endif %}</div>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.description }}</p>
+      {% unless item.url %}<noscript><p class="muted">Demo preview. Video link coming soon.</p></noscript>{% endunless %}
+    </article>
+  {% endfor %}
+</div>
+<div class="reading-group" data-content-group>
+  <p class="eyebrow reading-label">Recommended reading · by Raihan Sultan</p>
+  <div class="reading-grid">
+    {% for item in site.data.contents.readings %}
+      <article class="content-card reading-card" data-content-format="teaching">
+        <a class="reading-cover" href="{{ item.url }}" tabindex="-1" aria-hidden="true"><img src="{{ item.image }}" alt="" loading="lazy" width="600" height="338"></a>
+        <div class="reading-copy">
+          <div class="card-meta"><span>{{ item.tag }}</span><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %-d, %Y' }}</time></div>
+          <h3><a href="{{ item.url }}">{{ item.title }} <span aria-hidden="true">↗</span></a></h3>
+          <p>{{ item.description }}</p>
+          <p class="reading-credit">{{ item.author }}</p>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</div>
+<dialog id="content-demo" aria-labelledby="demo-title" aria-describedby="demo-description">
+  <button type="button" class="dialog-close" aria-label="Close preview">×</button>
+  <p class="eyebrow" id="demo-platform"></p>
+  <h2 id="demo-title"></h2>
+  <p id="demo-description">This is a sample content card. Zakaria’s video will appear here once the link is added.</p>
+  <button type="button" class="personal-button dialog-done">Got it</button>
+</dialog>
