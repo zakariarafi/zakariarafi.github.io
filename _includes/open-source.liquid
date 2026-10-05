@@ -1,0 +1,38 @@
+<p class="eyebrow">Open Source</p>
+<div class="section-heading">
+  <h2 id="open-source-title">Systems & Code</h2>
+  <span class="section-note">Learning by building</span>
+</div>
+<blockquote class="research-quote code-quote">
+  <p>“Talk is cheap. Show me the code.”</p>
+  <cite>— Linus Torvalds</cite>
+</blockquote>
+<p class="section-intro">Three open-source projects, 2023 to 2026, sized by their star counts.</p>
+<div class="open-source-grid">
+  {% for project in site.data.open_source.projects %}
+    <article class="source-project">
+      <a href="{{ project.url }}" class="source-marker-area" aria-label="{{ project.title }}: {{ project.stars }} GitHub stars">
+        <span
+          class="source-marker{% if project.stars == 0 %} zero-stars{% endif %}"
+          style="width: {{ project.marker_size }}px; height: {{ project.marker_size }}px;"
+          aria-hidden="true"
+        >
+          {{- project.stars -}}
+        </span>
+      </a>
+      <div class="card-meta">
+        <span>{{ project.topic }}</span><span>{{ project.year }} · {{ project.stars }} ★</span>
+      </div>
+      <h3>
+        <a href="{{ project.url }}">
+          {{- project.title }}
+          <span aria-hidden="true">↗</span></a
+        >
+      </h3>
+      <p>{{ project.description }}</p>
+    </article>
+  {% endfor %}
+</div>
+<p class="star-note">
+  GitHub stars checked {{ site.data.open_source.checked_on | date: '%b %-d, %Y' }}. Zero-star projects use a small outline marker.
+</p>
