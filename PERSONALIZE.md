@@ -2,15 +2,15 @@
 
 This site keeps Jekyll/al-folio and uses a minimal white academic design.
 
-- Bio, photo, location: '_pages/about.md'.
-- Homepage sections: '_layouts/about.liquid'. Awards stay last.
-- Video cards and recommended articles: '_data/contents.yml'.
-- Awards: '_data/awards.yml'.
-- Quotes: '_data/quotes.yml'.
-- Contact identifiers: '_data/socials.yml'.
-- White theme: 'assets/css/personal.css'. Dark mode is disabled in '_config.yml'.
+- Bio, photo, location: '\_pages/about.md'.
+- Homepage sections: '\_layouts/about.liquid'. Awards stay last.
+- Video cards and recommended articles: '\_data/contents.yml'.
+- Awards: '\_data/awards.yml'.
+- Quotes: '\_data/quotes.yml'.
+- Contact identifiers: '\_data/socials.yml'.
+- White theme: 'assets/css/personal.css'. Dark mode is disabled in '\_config.yml'.
 - Content filters, mobile navigation, and demo previews: 'assets/js/personal.js'.
-- Teaching/resources page: '_pages/teaching.md', now included in the build.
+- Teaching/resources page: '\_pages/teaching.md', now included in the build.
 
 ## Replace the demo videos
 

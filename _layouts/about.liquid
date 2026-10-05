@@ -3,10 +3,23 @@ layout: default
 ---
 <div class="academic-home">
   <aside class="academic-sidebar" aria-label="Profile and contact">
-    <img class="profile-photo" src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}" alt="{{ page.profile.alt }}" width="180" height="216" fetchpriority="high">
+    <img
+      class="profile-photo"
+      src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}"
+      alt="{{ page.profile.alt }}"
+      width="180"
+      height="216"
+      fetchpriority="high"
+    >
     <div class="sidebar-info">
-      <p class="sidebar-name">{{ site.first_name }} {{ site.last_name }}</p>
-      <p class="sidebar-role">Undergraduate researcher<br>Universitas Brawijaya</p>
+      <p class="sidebar-name">
+        {{ site.first_name }}
+        {{ site.last_name }}
+      </p>
+      <p class="sidebar-role">
+        Undergraduate researcher<br>
+        Universitas Brawijaya
+      </p>
       <p class="sidebar-location"><span aria-hidden="true">⌖</span> {{ page.profile.location }}</p>
       <div class="sidebar-links" id="contact">
         <a href="mailto:{{ site.data.socials.email }}">Email <span aria-hidden="true">↗</span></a>
@@ -20,42 +33,112 @@ layout: default
   <div class="academic-main">
     <section id="about" class="about-section" aria-labelledby="profile-title">
       <p class="eyebrow">Learning, researching, sharing.</p>
-      <h1 id="profile-title">{{ site.first_name }} {{ site.last_name }}<span class="name-dot">.</span></h1>
+      <h1 id="profile-title">
+        {{ site.first_name }}
+        {{ site.last_name -}}
+        <span class="name-dot">.</span>
+      </h1>
       <p class="hero-subtitle">{{ page.subtitle }}</p>
       <div class="bio">{{ content }}</div>
       <a class="text-link" href="mailto:{{ site.data.socials.email }}">Let’s exchange ideas <span aria-hidden="true">↗</span></a>
     </section>
     <section id="research" class="home-section" aria-labelledby="research-title">
-      <div class="section-heading"><h2 id="research-title">Research</h2><span class="section-note">What I’m exploring</span></div>
-      <blockquote class="research-quote"><p>“{{ site.data.quotes.research }}”</p><cite>A question that resonates with me · <a href="{{ site.data.quotes.source }}">Jingwei Zuo ↗</a></cite></blockquote>
-      <p>I’m interested in the intersection of machine learning and systems, and how efficient computation can support better learning and trading systems.</p>
+      <div class="section-heading">
+        <h2 id="research-title">Research</h2>
+        <span class="section-note">What I’m exploring</span>
+      </div>
+      <blockquote class="research-quote">
+        <p>“{{ site.data.quotes.research }}”</p>
+        <cite>A question that resonates with me · <a href="{{ site.data.quotes.source }}">Jingwei Zuo ↗</a></cite>
+      </blockquote>
+      <p>
+        I’m interested in the intersection of machine learning and systems, and how efficient computation can support better learning and trading
+        systems.
+      </p>
       <ol class="research-list">
-        <li><span class="list-number" aria-hidden="true">01</span><div><h3>Machine learning & systems</h3><p>Understanding how learning models and the systems behind them work together.</p></div></li>
-        <li><span class="list-number" aria-hidden="true">02</span><div><h3>Algorithmic trading</h3><p>Exploring efficient trading systems powered by machine learning.</p></div></li>
-        <li><span class="list-number" aria-hidden="true">03</span><div><h3>Quantum computing</h3><p>Learning about quantum computer architecture for machine learning in trading.</p></div></li>
+        <li>
+          <span class="list-number" aria-hidden="true">01</span>
+          <div>
+            <h3>Machine learning & systems</h3>
+            <p>Understanding how learning models and the systems behind them work together.</p>
+          </div>
+        </li>
+        <li>
+          <span class="list-number" aria-hidden="true">02</span>
+          <div>
+            <h3>Algorithmic trading</h3>
+            <p>Exploring efficient trading systems powered by machine learning.</p>
+          </div>
+        </li>
+        <li>
+          <span class="list-number" aria-hidden="true">03</span>
+          <div>
+            <h3>Quantum computing</h3>
+            <p>Learning about quantum computer architecture for machine learning in trading.</p>
+          </div>
+        </li>
       </ol>
-      <div class="section-links"><a class="text-link" href="{{ '/projects/' | relative_url }}">More about my interests ↗</a><a class="text-link" href="{{ '/repositories/' | relative_url }}">Code on GitHub ↗</a></div>
+      <div class="section-links">
+        <a class="text-link" href="{{ '/projects/' | relative_url }}">More about my interests ↗</a
+        ><a class="text-link" href="{{ '/repositories/' | relative_url }}">Code on GitHub ↗</a>
+      </div>
     </section>
     <section class="home-section" aria-labelledby="education-title">
       <div class="section-heading"><h2 id="education-title">Education & experience</h2></div>
-      <div class="experience-row"><span class="list-number" aria-hidden="true">↗</span><div><h3>Universitas Brawijaya</h3><p>Undergraduate · Faculty of Computer Science</p></div></div>
-      <div class="experience-row"><span class="list-number" aria-hidden="true">↗</span><div><h3>System and AI Research Training Class</h3><p>Garuda ACE Community · Professor Haryadi Gunawi, University of Chicago</p></div></div>
+      <div class="experience-row">
+        <span class="list-number" aria-hidden="true">↗</span>
+        <div>
+          <h3>Universitas Brawijaya</h3>
+          <p>Undergraduate · Faculty of Computer Science</p>
+        </div>
+      </div>
+      <div class="experience-row">
+        <span class="list-number" aria-hidden="true">↗</span>
+        <div>
+          <h3>System and AI Research Training Class</h3>
+          <p>Garuda ACE Community · Professor Haryadi Gunawi, University of Chicago</p>
+        </div>
+      </div>
     </section>
     <section id="teaching" class="home-section" aria-labelledby="teaching-title">
-      <div class="section-heading"><h2 id="teaching-title">Teaching & mentorship</h2><span class="section-note">Learning together</span></div>
+      <div class="section-heading">
+        <h2 id="teaching-title">Teaching & mentorship</h2>
+        <span class="section-note">Learning together</span>
+      </div>
       <p>I dedicate one hour each week to guidance and mentorship for students from underrepresented groups, or anyone who needs support.</p>
-      <div class="mentorship-line"><p>A little guidance can go a long way.</p><a class="personal-button" href="https://forms.gle/SVXkp8QxZTtp4B9s8">Request mentorship <span aria-hidden="true">↗</span></a></div>
+      <div class="mentorship-line">
+        <p>A little guidance can go a long way.</p>
+        <a class="personal-button" href="https://forms.gle/SVXkp8QxZTtp4B9s8">Request mentorship <span aria-hidden="true">↗</span></a>
+      </div>
       <a class="text-link" href="{{ '/teaching/' | relative_url }}">Browse learning resources <span aria-hidden="true">→</span></a>
     </section>
     <section id="contents" class="home-section" aria-labelledby="contents-title">
-      <div class="section-heading"><h2 id="contents-title">Contents</h2><span class="section-note">Ideas worth sharing</span></div>
+      <div class="section-heading">
+        <h2 id="contents-title">Contents</h2>
+        <span class="section-note">Ideas worth sharing</span>
+      </div>
       <p class="section-intro">Video notes, short explanations, and reading for curious minds.</p>
       {% include contents.liquid %}
     </section>
     <section id="awards" class="home-section awards-section" aria-labelledby="awards-title">
-      <div class="section-heading"><h2 id="awards-title">Awards</h2><span class="section-note">A few milestones</span></div>
+      <div class="section-heading">
+        <h2 id="awards-title">Awards</h2>
+        <span class="section-note">A few milestones</span>
+      </div>
       {% for award in site.data.awards %}
-        <article class="award-row"><span class="award-mark" aria-hidden="true">✳</span><div><h3>{{ award.title }}<span class="award-organization">, {{ award.organization }} <span class="award-year">| {{ award.year }}</span></span></h3><p>{{ award.description }}</p></div></article>
+        <article class="award-row">
+          <span class="award-mark" aria-hidden="true">✳</span>
+          <div>
+            <h3>
+              {{ award.title -}}
+              <span class="award-organization"
+                >, {{ award.organization }}
+                <span class="award-year">| {{ award.year }}</span></span
+              >
+            </h3>
+            <p>{{ award.description }}</p>
+          </div>
+        </article>
       {% endfor %}
     </section>
   </div>

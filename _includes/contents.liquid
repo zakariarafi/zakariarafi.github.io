@@ -10,18 +10,49 @@
   {% for item in site.data.contents.videos %}
     <article class="content-card video-card" data-content-format="{{ item.format }}">
       {% if item.url %}
-        <a class="video-cover artwork-{{ item.artwork }}" href="{{ item.url | escape }}" aria-label="Watch {{ item.title | escape }} on {{ item.platform }}">
+        <a
+          class="video-cover artwork-{{ item.artwork }}"
+          href="{{ item.url | escape }}"
+          aria-label="Watch {{ item.title | escape }} on {{ item.platform }}"
+        >
       {% else %}
-        <button type="button" class="video-cover artwork-{{ item.artwork }}" data-demo-title="{{ item.title | escape }}" data-demo-platform="{{ item.platform | escape }}" aria-haspopup="dialog" aria-label="Preview demo: {{ item.title | escape }}">
+        <button
+          type="button"
+          class="video-cover artwork-{{ item.artwork }}"
+          data-demo-title="{{ item.title | escape }}"
+          data-demo-platform="{{ item.platform | escape }}"
+          aria-haspopup="dialog"
+          aria-label="Preview demo: {{ item.title | escape }}"
+        >
       {% endif %}
-        <span class="artwork-label" aria-hidden="true">{% case item.artwork %}{% when 'learning' %}Learn.<br>Understand.<br>Build.{% when 'minute' %}A small idea.<br>A new perspective.{% when 'systems' %}Think in<br>systems.{% endcase %}</span>
-        <span class="play-symbol" aria-hidden="true">▶</span>
-        <span class="video-duration">{{ item.duration }}</span>
+      <span class="artwork-label" aria-hidden="true">
+        {%- case item.artwork -%}
+          {%- when 'learning' -%}
+            Learn.<br>
+            Understand.<br>
+            Build.
+          {%- when 'minute' -%}
+            A small idea.<br>
+            A new perspective.
+          {%- when 'systems' -%}
+            Think in<br>
+            systems.
+        {%- endcase -%}
+      </span>
+      <span class="play-symbol" aria-hidden="true">▶</span>
+      <span class="video-duration">{{ item.duration }}</span>
       {% if item.url %}</a>{% else %}</button>{% endif %}
-      <div class="card-meta"><span>{{ item.platform }}</span>{% if item.demo %}<span class="demo-label">Demo</span>{% endif %}</div>
+      <div class="card-meta">
+        <span>{{ item.platform }}</span>
+        {%- if item.demo -%}
+          <span class="demo-label">Demo</span>
+        {%- endif %}
+      </div>
       <h3>{{ item.title }}</h3>
       <p>{{ item.description }}</p>
-      {% unless item.url %}<noscript><p class="muted">Demo preview. Video link coming soon.</p></noscript>{% endunless %}
+      {% unless item.url -%}
+        <noscript><p class="muted">Demo preview. Video link coming soon.</p></noscript>
+      {%- endunless %}
     </article>
   {% endfor %}
 </div>
@@ -30,10 +61,19 @@
   <div class="reading-grid">
     {% for item in site.data.contents.readings %}
       <article class="content-card reading-card" data-content-format="teaching">
-        <a class="reading-cover" href="{{ item.url }}" tabindex="-1" aria-hidden="true"><img src="{{ item.image }}" alt="" loading="lazy" width="600" height="338"></a>
+        <a class="reading-cover" href="{{ item.url }}" tabindex="-1" aria-hidden="true"
+          ><img src="{{ item.image }}" alt="" loading="lazy" width="600" height="338"
+        ></a>
         <div class="reading-copy">
-          <div class="card-meta"><span>{{ item.tag }}</span><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %-d, %Y' }}</time></div>
-          <h3><a href="{{ item.url }}">{{ item.title }} <span aria-hidden="true">↗</span></a></h3>
+          <div class="card-meta">
+            <span>{{ item.tag }}</span><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %-d, %Y' }}</time>
+          </div>
+          <h3>
+            <a href="{{ item.url }}">
+              {{- item.title }}
+              <span aria-hidden="true">↗</span></a
+            >
+          </h3>
           <p>{{ item.description }}</p>
           <p class="reading-credit">{{ item.author }}</p>
         </div>
