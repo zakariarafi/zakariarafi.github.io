@@ -24,19 +24,19 @@ videos:
     artwork: systems
     url:
     demo: true
-# External readings are credited to their original author.
+# Unpublished sample articles by Zakaria.
 readings:
-  - title: "Why is C Faster Than Python? OS-Level Perspective"
-    tag: Python
-    description: A comparison between C and Python language in the context of Operating System level.
-    date: 2025-03-05
-    author: Raihan Sultan Pasha Basuki
-    url: https://raihansltn.github.io/teaching/cvspy/
-    image: https://raihansltn.github.io/teaching/cvspy/featured_hu16986945082472946440.webp
-  - title: Cryptography CTF - Power Prime
-    tag: Python
-    description: Writeup for CTF in Cryptography.
-    date: 2024-08-26
-    author: Raihan Sultan Pasha Basuki
-    url: https://raihansltn.github.io/teaching/powerprime/
-    image: https://raihansltn.github.io/teaching/powerprime/featured_hu16119091900042454291.webp
+  - title: How a Request Travels Through the Cloud
+    tag: Cloud
+    description: A sample introduction to load balancers, services, and the path of a network request.
+    author: Zakaria Rafi
+    artwork: cloud
+    url:
+    demo: true
+  - title: Serving ML Models Beyond the Notebook
+    tag: ML Systems
+    description: Sample notes on inference latency, batching, and resource use in machine learning systems.
+    author: Zakaria Rafi
+    artwork: ml
+    url:
+    demo: true

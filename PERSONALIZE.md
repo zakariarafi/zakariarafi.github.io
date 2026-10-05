@@ -19,8 +19,7 @@ To publish a real video card, add the full YouTube, TikTok, or Instagram post UR
 to 'url', then set 'demo: false'. The preview button becomes a direct video link.
 Leave the URL empty to retain the clearly marked demo preview.
 
-The two recommended readings link to Raihan Sultan's original articles and
-credit him as their author. Replace these with your own articles when ready.
+Recommended readings are unpublished demo articles by Zakaria Rafi. Add each article URL and set demo to false when it is ready.
 The 2025 UChicago-Indonesia award is Zakaria's, as confirmed during implementation.
 
 ## References
@@ -39,7 +38,7 @@ Use Ruby 3.3 and the repository's existing dependencies:
     bundle exec jekyll serve
 
 Visit http://localhost:4000. The current GitHub Actions workflow builds and
-publishes changes pushed to main or master. Review the design before merging.
+publishes changes pushed to main, master, or minimal-white-academic. Review the design before merging.
 
 Upstream demo posts, projects, news, publications, CV, and people pages remain
 excluded from the build. Add personal content before enabling those sections.
@@ -49,3 +48,5 @@ excluded from the build. Add personal content before enabling those sections.
 The Jekyll build was checked, along with desktop and mobile layouts, all five
 content filters, demo dialog opening and closing, and mobile navigation.
 Widths checked: 1440, 768, 390, and 320 pixels.
+
+Open-source repositories and star-count snapshots are in \_data/open_source.yml. Counts are checked on the displayed date and do not refresh automatically.

@@ -1,0 +1,25 @@
+# Star counts checked against GitHub on 2026-10-05. Refresh when needed.
+# Marker sizes use square-root scaling; zero stars get a small outline marker.
+checked_on: "2026-10-05"
+projects:
+  - title: Computer Vision in Indonesian
+    description: Learning computer vision with documentation in Bahasa Indonesia.
+    url: https://github.com/zakariarafi/learning-computer-vision-indonesia-garuda
+    year: 2025
+    stars: 3
+    marker_size: 72
+    topic: Computer vision
+  - title: arXiv Paper Downloader
+    description: A repository for downloading research papers from arXiv.
+    url: https://github.com/zakariarafi/ArxivPaperDownloader
+    year: 2024
+    stars: 0
+    marker_size: 24
+    topic: Research tooling
+  - title: Machine Learning with Time Series
+    description: Learning and experimenting with machine learning for time-series data.
+    url: https://github.com/zakariarafi/Zakaria-Rafi-Machine-Learning-dengan-Data-Time-Series
+    year: 2023
+    stars: 0
+    marker_size: 24
+    topic: Machine learning
