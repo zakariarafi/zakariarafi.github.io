@@ -1,0 +1,42 @@
+# Demos: replace url with a real video URL and set demo to false when ready.
+videos:
+  - title: Understanding machine learning
+    platform: YouTube
+    format: youtube
+    description: A closer look at the ideas behind learning systems.
+    duration: "08:24"
+    artwork: learning
+    url:
+    demo: true
+  - title: One idea, one minute
+    platform: TikTok
+    format: tiktok
+    description: Small explanations for curious minds.
+    duration: "00:58"
+    artwork: minute
+    url:
+    demo: true
+  - title: A little systems thinking
+    platform: Instagram Reels
+    format: reels
+    description: Notes on making computation more efficient.
+    duration: "00:45"
+    artwork: systems
+    url:
+    demo: true
+# External readings are credited to their original author.
+readings:
+  - title: "Why is C Faster Than Python? OS-Level Perspective"
+    tag: Python
+    description: A comparison between C and Python language in the context of Operating System level.
+    date: 2025-03-05
+    author: Raihan Sultan Pasha Basuki
+    url: https://raihansltn.github.io/teaching/cvspy/
+    image: https://raihansltn.github.io/teaching/cvspy/featured_hu16986945082472946440.webp
+  - title: Cryptography CTF - Power Prime
+    tag: Python
+    description: Writeup for CTF in Cryptography.
+    date: 2024-08-26
+    author: Raihan Sultan Pasha Basuki
+    url: https://raihansltn.github.io/teaching/powerprime/
+    image: https://raihansltn.github.io/teaching/powerprime/featured_hu16119091900042454291.webp
