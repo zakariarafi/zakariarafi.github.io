@@ -5,7 +5,10 @@ layout: default
   <section class="profile-hero" aria-labelledby="profile-title">
     <div class="profile-intro">
       <p class="eyebrow">Universitas Brawijaya · Computer Science</p>
-      <h1 id="profile-title">{{ site.first_name }} {{ site.last_name }}</h1>
+      <h1 id="profile-title">
+        {{ site.first_name }}
+        {{ site.last_name }}
+      </h1>
       <p class="hero-subtitle">{{ page.subtitle }}</p>
       <div class="bio">{{ content }}</div>
       <div class="profile-actions">
@@ -25,7 +28,9 @@ layout: default
     <p class="eyebrow">What I’m exploring</p>
     <h2 id="interests-title">Research interests</h2>
     <ul class="interest-tags">
-      {% for interest in page.interests %}<li>{{ interest }}</li>{% endfor %}
+      {% for interest in page.interests %}
+        <li>{{ interest }}</li>
+      {% endfor %}
     </ul>
   </section>
   <section class="mentorship-panel" aria-labelledby="mentorship-title">
